@@ -1,0 +1,49 @@
+:root{
+  --color1:rgb(255, 255, 255);
+  --color2:rgb(0, 150, 0);
+  --color3:rgba(0, 255, 0, 0);
+}
+
+#rotator{
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  padding: 1px;
+  align-items: center;
+  background: linear-gradient(var(--color2), var(--color1), var(--color2));
+  perspective: 100px;
+}
+#rotator div {
+  width: 35px;
+  font-size: 30px;
+  cursor: default;
+  text-align: center;
+  
+  -webkit-user-select: none;   /*Safari */
+  -ms-user-select: none;     /*IE 10+ and Edge */
+  user-select: none;          /*Standard syntax */
+  
+  border-left:1px solid linear-gradient(var(--color2), var(--color1), var(--color2));
+  border-right:1px solid linear-gradient(var(--color2), var(--color1), var(--color2));
+}
+#top{
+  transform: rotateX(30deg);
+  padding: 3px;
+  opacity: 0.5;
+  line-height: 70%;  
+    
+}
+#center.fadeIn {
+  font-size: 40px;
+  border-top:1px solid rgb(228, 228, 228);
+  border-bottom:1px solid rgb(228, 228, 228);
+}
+#bottom{
+  /*transform-style: preserve-3d;*/
+  transform: rotateX(-30deg);
+  padding: 3px;
+  opacity: 0.5;
+  line-height: 70%;
+}
+
+ 
